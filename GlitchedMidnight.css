@@ -216,6 +216,7 @@ body {
     .notice__6e2b9 /* notice banner */ {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
+        background: red;
     }
 
     .container__01ae2 /* vc chat + titlebar group */ {
