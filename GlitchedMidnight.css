@@ -280,7 +280,6 @@ body {
         right: 12px;
         border-radius: var(--radius-sm);
         padding: 0 8px;
-        background: none;
     }
 
     .bottom__7aaec /* channel list new unreads pill */ {
