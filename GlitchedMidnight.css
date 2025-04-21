@@ -87,7 +87,7 @@ body {
         align-items: center;
     }
     .expandedFolderBackground__48112 {
-        right: calc(var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size)) / 2 + var(--border-thickness));
+        left: calc(var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size)) / 2 + var(--border-thickness));
     }
 
     .sidebarList_c48ade /* channel list */ {
