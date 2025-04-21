@@ -235,6 +235,7 @@ body {
     .notice__6e2b9 /* notice banner */ {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
+        box-sizing: border-box;
         background: rgb(172, 83, 113);
     }
 
@@ -582,8 +583,22 @@ body {
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
         }
-        .chatContent_f75fb0:has(.typing_b88801) .scroller__36d07 {
-            bottom: 26px;
+        .scrollerSpacer__36d07 {
+            height: calc(26px + var(--space-xs));
+        }
+        .scroller__36d07::-webkit-scrollbar-track {
+            margin-bottom: calc(26px);
+        }
+        .chatContent_f75fb0:has(.typing_b88801) .messagesWrapper__36d07::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--background-base-lower);
+            height: 26px;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            z-index: 1;
         }
         .form_f75fb0 {
             display: flex;
@@ -645,22 +660,22 @@ body {
 
     /* accent colors */
     --accent-1: var(--blue-1); /* links and other accent text */
-    --accent-2: hsl(204, 91%, 46%); /* small accent elements */
-    --accent-3: hsl(283, 89%, 39%); /* accent buttons */
-    --accent-4: hsl(266, 85%, 63%); /* accent buttons when hovered */
-    --accent-5: hsl(199, 85%, 55%); /* accent buttons when clicked */
-    --accent-new: hsla(271, 89%, 74%, 0.822); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --accent-2: var(--blue-2); /* small accent elements */
+    --accent-3: var(--blue-3); /* accent buttons */
+    --accent-4: var(--blue-4); /* accent buttons when hovered */
+    --accent-5: var(--blue-5); /* accent buttons when clicked */
+    --accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* status indicator colors */
-    --online: #f008aa; /* change to #43a25a for default */
-    --dnd: #5f052b; /* change to #d83a42 for default */
-    --idle: #9b7bf1; /* change to #ca9654 for default */
-    --streaming: #8a09f3; /* change to ##9147ff for default */
-    --offline: #798bee; /* change to #83838b for default offline color */
+    --online: var(--green-2); /* change to #43a25a for default */
+    --dnd: var(--red-2); /* change to #d83a42 for default */
+    --idle: var(--yellow-2); /* change to #ca9654 for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
     --border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
@@ -1259,7 +1274,7 @@ body {
 
 /* dms-button.css */
 body {
-    --dms-icon-svg-url: url('https://cdn.discordapp.com/emojis/1126125369519513731.gif?size=96&quality=lossless'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
