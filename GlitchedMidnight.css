@@ -492,7 +492,7 @@ body {
 
 /* background-image.css */
 body {
-    --background-image-url: url('');
+    --background-image-url: url('https://files.catbox.moe/k5aqnc.png');
 }
 
 @property --background-image {
