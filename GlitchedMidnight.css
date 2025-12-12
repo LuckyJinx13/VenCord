@@ -1918,4 +1918,9 @@ body {
     margin: 0 !important;
 }
 
+/* Fuck off Checkpoint */ 
+.button__85643:nth-of-type(1) {
+  display: none;
+}
+
 
