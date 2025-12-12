@@ -1887,4 +1887,35 @@ body {
     }
 }
 
+/* will you work here */ 
+.search__97492 > .searchBar__97492 {
+    width: 32px !important;
+    background: none;
+    border-color: transparent;
+    transition: background 0.25s ease, width 0.25s ease, border-color 0.25s ease;
+}
+
+.search__97492 > .searchBar__97492 .DraftEditor-root {
+    padding-right: 3px !important;
+}
+
+.search__97492 > .searchBar__97492 .icon__97492,
+.search__97492 > .searchBar__97492 ._974928fe84ca9647-icon {
+    margin-right: 7px;
+}
+
+.search__97492.open__97492 > .searchBar__97492,
+.search__97492._974928fe84ca9647-open > .searchBar__97492 {
+    width: 244px !important;
+}
+
+.search__97492._974928fe84ca9647-open > .searchBar__97492 {
+    background: var(--background-gradient-low, var(--input-background-default));
+    border-color: var(--input-border-default);
+}
+
+.search__49676 {
+    margin: 0 !important;
+}
+
 
