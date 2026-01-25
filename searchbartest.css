@@ -1,33 +1,37 @@
-/* Collapsed state */
-.searchBar__5a20a {
+/* === GLOBAL COLLAPSING SEARCH BARS (ALL DISCORD SEARCH FIELDS) === */
+
+/* Base collapsed state */
+div[role="search"] {
     width: 32px !important;
+    min-width: 32px !important;
     background: none !important;
     border-color: transparent !important;
-    transition: 
-        background .25s ease,
+    transition:
         width .25s ease,
+        background .25s ease,
         border-color .25s ease;
     overflow: hidden;
 }
 
-/* Text padding fix */
-.searchBar__5a20a .DraftEditor-root {
-    padding-right: 3px !important;
-}
-
-/* Expanded (when focused / open) */
-.searchBar__5a20a:focus-within {
+/* Expand when active (focused / typing / clicked) */
+div[role="search"]:focus-within {
     width: 244px !important;
+    min-width: 244px !important;
     background: var(--background-gradient-low, var(--input-background-default)) !important;
     border-color: var(--input-border-default) !important;
 }
 
+/* Inner text padding fix */
+div[role="search"] .DraftEditor-root {
+    padding-right: 3px !important;
+}
+
 /* Icon spacing */
-.searchBar__5a20a .iconContainer__82913 {
+div[role="search"] svg {
     margin-right: 7px;
 }
 
-/* Container margin reset */
-.container__11d72 {
+/* Remove default margins that break alignment */
+div[role="search"] {
     margin: 0 !important;
 }
